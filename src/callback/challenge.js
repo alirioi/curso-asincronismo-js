@@ -43,7 +43,7 @@ fetchData(`${API}/products`, function (error1, data1) {
     //se valida si existe un error, en caso de que exista se detiene el proceso y se imprime el error
     if (error2) return console.error(error2);
     //Se invoca nuevamente la función fetchData con el fin de acceder a la categoría, se envían como parámetros la url de la API con la concatenación de 'Categories' y el atributo Id de categoría del objeto data2 de la función anterior
-    //en este caso puntual se hace uso de Optional Caining el cual hace una evaluación de las propiedades de un objeto y en vez de arrojar un error devuelve undefined en caso que la propiedad no exista o sea null.
+    //en este caso puntual se hace uso de Optional Chaining el cual hace una evaluación de las propiedades de un objeto y en vez de arrojar un error devuelve undefined en caso que la propiedad no exista o sea null.
     //igual que las anteriores e envía una función anónima con 2 argumentos, un objeto Error y un objeto de datos
     fetchData(
       `${API}/categories/${data2?.category?.id}`,
